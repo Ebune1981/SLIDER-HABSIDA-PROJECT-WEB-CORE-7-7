@@ -1,17 +1,14 @@
-:root {
-  color: #20272b;
-  background: #f4f6f5;
-  font-family: Arial, sans-serif;
-  font-synthesis: none;
-}
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  background: lightgray;
 }
 
 .brands {
@@ -55,7 +52,7 @@ body {
 
 .brand-card:hover {
   transform: translateY(-2px);
-  border-color: #25836e;
+  border-color:gray;
 }
 
 .brand-card img {
@@ -71,26 +68,30 @@ body {
 }
 
 .toggle-brands {
+  align-items: center;
+  gap: 8px;
   margin-top: 20px;
   padding: 10px;
-  border-radius: 7px;
-  color:black;
+  border: 0;
+  background: transparent;
+  color: black;
   font-weight: 700;
   cursor: pointer;
-  margin-right:300px;
-  width: 80px;
+  margin-right: 300px;
+  width: 100px;
+  display: none;
 }
+
 .toggle-brands-chevron {
   width: 16px;
   height: 16px;
-  margin-right:100px;
+  flex: 0 0 16px;
   fill: none;
-  stroke: currentColor;
+  stroke: #20b2aa;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width:2;
-  vertical-align:right;
-
+  stroke-width: 2;
+  transition: transform 160ms ease;
 }
 
 .toggle-brands[aria-expanded="true"] .toggle-brands-chevron {
@@ -126,10 +127,10 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: #25836e;
+  background:#808080;
 }
 
-@media (min-width: 658px) {
+@media (min-width: 768px) {
   .brands {
     display:flex;
     flex-direction:column;
@@ -140,6 +141,7 @@ body {
   .slide-title {
     margin-bottom: 24px;
     font-size: 20px;
+    
   }
 
   .brand-list {
@@ -154,9 +156,12 @@ body {
   .swiper-pagination {
     display: none;
   }
-}
+  .toggle-brands{
+    display: flex;
+  }
+  
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) {
   .brand-list {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
