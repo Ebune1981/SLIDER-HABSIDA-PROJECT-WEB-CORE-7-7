@@ -34,19 +34,15 @@ body {
 
 .brand-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
 .brand-card {
   display: flex;
-  min-height: 104px;
+  min-height: 80px;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  border: 1px solid #dce2e0;
-  border-radius: 4px;
-  background: #fff;
+  padding: 5px;
   transition: border-color 160ms ease, transform 160ms ease;
 }
 
@@ -57,10 +53,10 @@ body {
 
 .brand-card img {
   display: block;
-  width: 100%;
-  max-width: 128px;
-  height: 64px;
-  object-fit: contain;
+  width:100%;
+  min-width: 50px;
+  height: 60px;
+  object-fit:contain;
 }
 
 .brand-section:not(.is-expanded) .brand-card:nth-child(n + 5) {
